@@ -11,7 +11,7 @@ Requires python3. The voter data file is less than 250MB.
 ## Running
 
 1. Obtain voter registration database (see 'Data Source' section).
-2. Move and rename file to `./data/voters.txt`.
+2. Move and rename file to `./data/voters.csv`.
 3. To plot voter turnout lines vs. age for all counties on the same plot: `./plot_turnout_by_age.py`.
 
 ## Data Source
