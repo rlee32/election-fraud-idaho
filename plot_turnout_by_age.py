@@ -59,7 +59,7 @@ def get_voters() -> Dict[str, List[any]]:
         age_index = header.index('Age')
         reg_index = header.index('RegistrationDate')
         vid_index = header.index('VoterID')
-        election_index = header.index('11/03/2020')
+        election_index = header.index(ELECTION_DATE)
         age_errors = set()
         reg_errors = set()
         voters = {}
@@ -155,9 +155,6 @@ import sys
 
 if __name__ == '__main__':
     voters = get_voters()
-
-    sys.exit()
-
     plotted = 0
     key = {}
     for county in voters:
@@ -181,7 +178,7 @@ if __name__ == '__main__':
     print(f'plotted {plotted} counties.')
     plt.xlabel(f'Age (ages with less than {MINIMUM_REGISTERED_VOTERS} registered voters are hidden)')
     plt.ylabel('Normalized voter turnout (votes / registered voters / overall turnout fraction)')
-    plt.title(f'{ELECTION_YEAR} Missouri Voter Turnout vs. Age ({plotted} of {TOTAL_COUNTIES} counties; each line = 1 county)')
+    plt.title(f'{ELECTION_YEAR} Idaho Voter Turnout vs. Age ({plotted} of {TOTAL_COUNTIES} counties; each line = 1 county)')
     plt.show()
 
 
